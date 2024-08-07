@@ -8,6 +8,7 @@ import { Card, CardContent } from "./_components/ui/card"
 import { Input } from "./_components/ui/input"
 import { quickSearchOptions } from "./_constants/search"
 import { db } from "./_lib/prisma"
+import Footer from "./_components/footer"
 
 const Home = async () => {
   const barbershops = await db.barbershop.findMany({})
@@ -81,15 +82,7 @@ const Home = async () => {
         </div>
       </div>
 
-      <footer>
-        <Card>
-          <CardContent className="px-5 py-6">
-            <p className="text-sm text-gray-400">
-              © 2023 Copyright <span className="font-bold">FSW Barber</span>
-            </p>
-          </CardContent>
-        </Card>
-      </footer>
+      <Footer />
     </div>
   )
 }
