@@ -81,8 +81,6 @@ const Home = async () => {
           ))}
         </div>
       </div>
-
-      <Footer />
     </div>
   )
 }
